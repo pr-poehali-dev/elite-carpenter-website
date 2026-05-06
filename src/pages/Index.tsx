@@ -8,21 +8,21 @@ const MASTER_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe
 const TABLE_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/files/f9946736-63c3-4c0d-b9f5-4c8322a285ea.jpg";
 
 const PORTFOLIO = [
-  { title: "Обеденный стол «Дуб»", category: "Мебель", price: "от 180 000 ₽", img: TABLE_IMG },
-  { title: "Библиотека «Венге»", category: "Хранение", price: "от 320 000 ₽", img: HERO_IMG },
-  { title: "Кухонный гарнитур", category: "Кухня", price: "от 450 000 ₽", img: TABLE_IMG },
-  { title: "Журнальный стол", category: "Мебель", price: "от 90 000 ₽", img: HERO_IMG },
-  { title: "Гардеробная система", category: "Хранение", price: "от 250 000 ₽", img: TABLE_IMG },
-  { title: "Кровать «Массив»", category: "Спальня", price: "от 200 000 ₽", img: HERO_IMG },
+  { title: "Беседка из бруса", category: "Постройки", price: "от 180 000 ₽", img: TABLE_IMG },
+  { title: "Деревянная терраса", category: "Террасы", price: "от 320 000 ₽", img: HERO_IMG },
+  { title: "Баня под ключ", category: "Постройки", price: "от 450 000 ₽", img: TABLE_IMG },
+  { title: "Навес с перголой", category: "Террасы", price: "от 90 000 ₽", img: HERO_IMG },
+  { title: "Деревянные полы", category: "Отделка", price: "от 250 000 ₽", img: TABLE_IMG },
+  { title: "Обшивка фасада", category: "Отделка", price: "от 120 000 ₽", img: HERO_IMG },
 ];
 
 const SERVICES = [
-  { icon: "Armchair", title: "Авторская мебель", desc: "Проектирование и изготовление уникальных изделий по индивидуальным чертежам с учётом ваших предпочтений", price: "от 90 000 ₽" },
-  { icon: "UtensilsCrossed", title: "Кухонные гарнитуры", desc: "Функциональные и эстетичные кухни из массива ценных пород дерева с интегрированными решениями", price: "от 350 000 ₽" },
-  { icon: "Library", title: "Библиотеки и стеллажи", desc: "Встроенные системы хранения, книжные шкафы и стеллажи с деталями ручной работы", price: "от 150 000 ₽" },
-  { icon: "DoorOpen", title: "Двери и панели", desc: "Массивные двери, декоративные панели и обшивка стен из натурального дерева", price: "от 60 000 ₽" },
-  { icon: "Bed", title: "Спальные гарнитуры", desc: "Кровати, комоды, прикроватные тумбы — единый стиль для вашей спальни", price: "от 200 000 ₽" },
-  { icon: "Star", title: "Реставрация", desc: "Бережное восстановление антикварной и старинной мебели с сохранением исторической ценности", price: "по запросу" },
+  { icon: "Home", title: "Деревянные постройки", desc: "Беседки, бани, летние кухни и хозяйственные блоки из качественного бруса и бревна под ключ", price: "от 180 000 ₽" },
+  { icon: "Trees", title: "Террасы и веранды", desc: "Открытые и закрытые террасы из лиственницы, сосны или термодерева с долговечным покрытием", price: "от 120 000 ₽" },
+  { icon: "Layers", title: "Деревянные полы", desc: "Укладка половой доски, паркета и террасной доски. Шлифовка и покрытие маслом или лаком", price: "от 2 500 ₽/м²" },
+  { icon: "LayoutPanelLeft", title: "Обшивка и отделка", desc: "Фасады, стены и потолки из натурального дерева: вагонка, блок-хаус, имитация бруса", price: "от 1 800 ₽/м²" },
+  { icon: "DoorOpen", title: "Двери и лестницы", desc: "Массивные межкомнатные двери, входные группы и деревянные лестницы любой сложности", price: "от 45 000 ₽" },
+  { icon: "Wrench", title: "Ремонт и реставрация", desc: "Замена венцов, ремонт кровли, конопатка швов и восстановление деревянных конструкций", price: "по запросу" },
 ];
 
 const PROCESS = [
@@ -34,9 +34,9 @@ const PROCESS = [
 ];
 
 const REVIEWS = [
-  { name: "Елена Соколова", role: "Владелица частного дома", text: "Артём создал для нас библиотеку мечты. Учёл каждую мелочь — от высоты полок до формы ручек. Это произведение искусства, которое живёт в нашем доме.", rating: 5 },
-  { name: "Михаил Ветров", role: "Ресторатор", text: "Заказывали мебель для ресторана. Результат превзошёл все ожидания — гости постоянно спрашивают, кто делал столы. Работаем уже на второй объект.", rating: 5 },
-  { name: "Наталья Крамер", role: "Дизайнер интерьера", text: "Сотрудничаем на многих проектах. Артём всегда точно воплощает дизайнерский замысел. Рекомендую коллегам без раздумий.", rating: 5 },
+  { name: "Елена Соколова", role: "Владелица загородного дома", text: "Руслан построил нам беседку и террасу. Работал чисто, в срок, без лишних вопросов. Соседи постоянно спрашивают контакты — всегда передаю с удовольствием.", rating: 5 },
+  { name: "Михаил Ветров", role: "Владелец базы отдыха", text: "Заказывали несколько бань и навесов для нашей базы. Руслан справился отлично — конструкции стоят уже третий год, никаких нареканий. Будем обращаться снова.", rating: 5 },
+  { name: "Наталья Крамер", role: "Дизайнер интерьера", text: "Сотрудничаем на нескольких объектах. Руслан точно воплощает задумку по проекту, аккуратен и пунктуален. Рекомендую коллегам без раздумий.", rating: 5 },
 ];
 
 const MATERIALS = [
@@ -62,11 +62,11 @@ const BASE_PRICES: Record<string, number> = {
 };
 
 const PRODUCT_NAMES: Record<string, string> = {
-  table: "Стол",
-  wardrobe: "Гардероб",
-  kitchen: "Кухня",
-  bed: "Кровать",
-  shelving: "Стеллаж",
+  table: "Беседка",
+  wardrobe: "Баня",
+  kitchen: "Терраса",
+  bed: "Навес",
+  shelving: "Отделка",
 };
 
 function useIntersection(ref: React.RefObject<Element>, threshold = 0.12) {
@@ -144,7 +144,7 @@ export default function Index() {
     return Math.round(base * mat * comp * sizeCoeff / 1000) * 1000;
   };
 
-  const portfolioCategories = ["Все", "Мебель", "Хранение", "Кухня", "Спальня"];
+  const portfolioCategories = ["Все", "Постройки", "Террасы", "Отделка"];
   const filteredPortfolio = activePortfolioFilter === "Все"
     ? PORTFOLIO
     : PORTFOLIO.filter(p => p.category === activePortfolioFilter);
@@ -171,8 +171,8 @@ export default function Index() {
         }}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex flex-col leading-tight">
-            <span className="font-cormorant text-xl font-light tracking-widest" style={{ color: "var(--cream)" }}>АРТЁМ ЛЕСНОЙ</span>
-            <span className="section-label" style={{ fontSize: "0.55rem", letterSpacing: "0.25em" }}>МАСТЕР СТОЛЯРНОГО ДЕЛА</span>
+            <span className="font-cormorant text-xl font-light tracking-widest" style={{ color: "var(--cream)" }}>РУСЛАН СВЕТЛЫЙ</span>
+            <span className="section-label" style={{ fontSize: "0.55rem", letterSpacing: "0.25em" }}>МАСТЕР ПЛОТНИЦКОГО ДЕЛА</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -225,7 +225,7 @@ export default function Index() {
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
             <div className="animate-fade-in-up opacity-0" style={{ animationFillMode: "forwards" }}>
-              <p className="section-label mb-6">Авторская столярная мастерская · Москва</p>
+              <p className="section-label mb-6">Авторская плотницкая мастерская · Москва</p>
             </div>
             <h1 className="font-cormorant animate-fade-in-up opacity-0 delay-200 mb-6"
               style={{ fontSize: "clamp(3rem, 7vw, 6rem)", lineHeight: "1.05", fontWeight: 300, animationFillMode: "forwards", color: "var(--cream)" }}>
@@ -235,8 +235,8 @@ export default function Index() {
             </h1>
             <p className="font-montserrat font-light mb-10 animate-fade-in-up opacity-0 delay-400 leading-relaxed"
               style={{ color: "var(--cream-muted)", fontSize: "1rem", maxWidth: "480px", animationFillMode: "forwards" }}>
-              Изделия из массива ценных пород дерева. Каждый предмет — единственный в своём роде,
-              созданный под конкретного человека и пространство.
+              Плотницкие работы любой сложности — от беседки до бани. Каждый объект возводится
+              с душой, из качественного дерева, с гарантией на результат.
             </p>
             <div className="flex flex-wrap gap-4 animate-fade-in-up opacity-0 delay-600" style={{ animationFillMode: "forwards" }}>
               <a href="#portfolio" className="btn-gold px-8 py-4 text-xs tracking-widest uppercase font-montserrat inline-block">
@@ -250,9 +250,9 @@ export default function Index() {
 
           <div className="flex flex-wrap gap-12 mt-16 pt-10 border-t" style={{ borderColor: "rgba(201,168,76,0.2)" }}>
             {[
-              { num: "12+", label: "Лет мастерства" },
-              { num: "340", label: "Реализованных проектов" },
-              { num: "100%", label: "Натуральные материалы" },
+              { num: "15+", label: "Лет мастерства" },
+              { num: "420", label: "Реализованных объектов" },
+              { num: "100%", label: "Натуральная древесина" },
             ].map((stat, i) => (
               <div key={i} className="animate-fade-in-up opacity-0" style={{ animationDelay: `${0.7 + i * 0.1}s`, animationFillMode: "forwards" }}>
                 <div className="font-cormorant text-4xl font-light" style={{ color: "var(--gold)" }}>{stat.num}</div>
@@ -277,7 +277,7 @@ export default function Index() {
                 <img src={MASTER_IMG} alt="Мастер" className="w-full aspect-[3/4] object-cover" style={{ filter: "grayscale(20%)" }} />
                 <div className="absolute -bottom-6 -right-6 p-8 border"
                   style={{ backgroundColor: "var(--wenge-light)", borderColor: "rgba(201,168,76,0.3)" }}>
-                  <div className="font-cormorant text-5xl font-light" style={{ color: "var(--gold)" }}>12</div>
+                  <div className="font-cormorant text-5xl font-light" style={{ color: "var(--gold)" }}>15</div>
                   <div className="font-montserrat text-xs tracking-widest uppercase mt-1" style={{ color: "var(--cream-muted)" }}>лет опыта</div>
                 </div>
                 <div className="absolute top-6 -left-4 w-16 h-16 border" style={{ borderColor: "var(--gold)", borderWidth: "1px" }} />
@@ -287,26 +287,26 @@ export default function Index() {
             <AnimatedSection className="lg:pl-8">
               <p className="section-label mb-4">О мастере</p>
               <h2 className="font-cormorant mb-6" style={{ fontSize: "clamp(2.5rem, 4vw, 3.8rem)", lineHeight: 1.1, fontWeight: 300, color: "var(--cream)" }}>
-                Артём Лесной —<br />
+                Руслан Светлый —<br />
                 <em style={{ color: "var(--gold-light)" }}>философия дерева</em>
               </h2>
               <div className="gold-divider mb-8" />
               <p className="font-montserrat font-light leading-loose mb-6" style={{ color: "var(--cream-muted)", fontSize: "0.9rem" }}>
-                Более двенадцати лет я работаю с деревом — не просто как с материалом, а как с живым
-                носителем истории. Каждая порода имеет свой характер, и моя задача — услышать его и
-                воплотить в изделии, которое прослужит поколениям.
+                Более пятнадцати лет я занимаюсь плотницким делом — строю бани, беседки, террасы
+                и деревянные дома. Для меня дерево — это живой материал, который требует уважения,
+                точного расчёта и опытных рук.
               </p>
               <p className="font-montserrat font-light leading-loose mb-10" style={{ color: "var(--cream-muted)", fontSize: "0.9rem" }}>
-                Окончил Строгановское училище, прошёл стажировку в мастерских Флоренции. Использую
-                исключительно ручной инструмент там, где это важно — чтобы каждая деталь была
-                прикосновением человека, а не машины.
+                Начинал с малых форм, сейчас берусь за объекты любой сложности. Работаю сам
+                и со своей проверенной бригадой — никаких субподрядчиков. Качество контролирую
+                лично на каждом этапе.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { icon: "Award", text: "Диплом Строгановского училища" },
-                  { icon: "Globe", text: "Стажировка во Флоренции" },
-                  { icon: "Hammer", text: "Ручная работа в ключевых деталях" },
-                  { icon: "Leaf", text: "Только сертифицированное дерево" },
+                  { icon: "Award", text: "15+ лет плотницкого опыта" },
+                  { icon: "Users", text: "Своя проверенная бригада" },
+                  { icon: "Hammer", text: "Ручная работа без субподрядчиков" },
+                  { icon: "Leaf", text: "Только сертифицированная древесина" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <Icon name={item.icon} size={16} className="mt-0.5 flex-shrink-0" style={{ color: "var(--gold)" }} />
@@ -667,11 +667,11 @@ export default function Index() {
       <footer className="py-10 border-t" style={{ borderColor: "rgba(201,168,76,0.15)", backgroundColor: "var(--wenge)" }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
-            <div className="font-cormorant text-lg font-light tracking-widest" style={{ color: "var(--cream)" }}>АРТЁМ ЛЕСНОЙ</div>
-            <div className="section-label mt-0.5" style={{ fontSize: "0.55rem" }}>МАСТЕР СТОЛЯРНОГО ДЕЛА</div>
+            <div className="font-cormorant text-lg font-light tracking-widest" style={{ color: "var(--cream)" }}>РУСЛАН СВЕТЛЫЙ</div>
+            <div className="section-label mt-0.5" style={{ fontSize: "0.55rem" }}>МАСТЕР ПЛОТНИЦКОГО ДЕЛА</div>
           </div>
           <div className="font-montserrat text-xs" style={{ color: "var(--cream-muted)" }}>
-            © 2026 Авторская мастерская Артёма Лесного
+            © 2026 Авторская мастерская Руслана Светлого
           </div>
           <div className="flex gap-4">
             {["Instagram", "MessageCircle"].map((icon, i) => (
