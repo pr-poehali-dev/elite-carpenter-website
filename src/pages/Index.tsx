@@ -59,19 +59,27 @@ const COMPLEXITY = [
 ];
 
 const BASE_PRICES: Record<string, number> = {
-  table: 85000,
-  wardrobe: 160000,
-  kitchen: 280000,
-  bed: 120000,
-  shelving: 95000,
+  gazebo: 180000,
+  bath: 380000,
+  terrace: 120000,
+  canopy: 60000,
+  floor: 80000,
+  cladding: 70000,
+  stairs: 90000,
+  roofing: 90000,
+  custom: 150000,
 };
 
 const PRODUCT_NAMES: Record<string, string> = {
-  table: "Беседка",
-  wardrobe: "Баня",
-  kitchen: "Терраса",
-  bed: "Навес",
-  shelving: "Отделка",
+  gazebo: "Беседка",
+  bath: "Баня",
+  terrace: "Терраса / веранда",
+  canopy: "Навес",
+  floor: "Деревянные полы",
+  cladding: "Обшивка и отделка",
+  stairs: "Лестница",
+  roofing: "Кровельные работы",
+  custom: "Нестандартный проект",
 };
 
 function useIntersection(ref: React.RefObject<Element>, threshold = 0.12) {
@@ -103,7 +111,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePortfolioFilter, setActivePortfolioFilter] = useState("Все");
-  const [selectedProduct, setSelectedProduct] = useState("table");
+  const [selectedProduct, setSelectedProduct] = useState("gazebo");
   const [selectedMaterial, setSelectedMaterial] = useState("pine");
   const [selectedComplexity, setSelectedComplexity] = useState("simple");
   const [size, setSize] = useState(4);
