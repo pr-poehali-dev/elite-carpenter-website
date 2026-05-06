@@ -104,6 +104,32 @@ export default function Index() {
   const [size, setSize] = useState(4);
   const [scrolled, setScrolled] = useState(false);
 
+  const [formName, setFormName] = useState("");
+  const [formPhone, setFormPhone] = useState("");
+  const [formMessage, setFormMessage] = useState("");
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formName.trim() || !formPhone.trim()) return;
+    setFormStatus("sending");
+    try {
+      const res = await fetch("https://functions.poehali.dev/62865867-06c8-4ef9-b0ac-472511fb5ce5", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: formName, phone: formPhone, message: formMessage })
+      });
+      if (res.ok) {
+        setFormStatus("success");
+        setFormName(""); setFormPhone(""); setFormMessage("");
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  };
+
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handler);
@@ -580,34 +606,57 @@ export default function Index() {
               </div>
 
               <div className="lg:col-span-3 border p-8" style={{ borderColor: "rgba(201,168,76,0.2)" }}>
-                <form className="space-y-5" onSubmit={e => e.preventDefault()}>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="section-label block mb-2">Имя</label>
-                      <input type="text" placeholder="Ваше имя"
-                        className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold"
-                        style={{ borderColor: "rgba(201,168,76,0.2)", color: "var(--cream)" }} />
+                {formStatus === "success" ? (
+                  <div className="flex flex-col items-center justify-center py-12 text-center gap-6">
+                    <div className="w-16 h-16 border-2 flex items-center justify-center" style={{ borderColor: "var(--gold)", borderRadius: "50%" }}>
+                      <Icon name="Check" size={28} style={{ color: "var(--gold)" }} />
                     </div>
                     <div>
-                      <label className="section-label block mb-2">Телефон</label>
-                      <input type="tel" placeholder="+7 (___) ___-__-__"
-                        className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold"
+                      <h3 className="font-cormorant text-2xl mb-2" style={{ color: "var(--cream)" }}>Заявка отправлена</h3>
+                      <p className="font-montserrat text-sm" style={{ color: "var(--cream-muted)" }}>
+                        Я свяжусь с вами в ближайшее время
+                      </p>
+                    </div>
+                    <button onClick={() => setFormStatus("idle")} className="btn-outline-gold px-8 py-3 text-xs tracking-widest uppercase font-montserrat">
+                      Отправить ещё
+                    </button>
+                  </div>
+                ) : (
+                  <form className="space-y-5" onSubmit={handleFormSubmit}>
+                    <div className="grid sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className="section-label block mb-2">Имя *</label>
+                        <input type="text" placeholder="Ваше имя" value={formName} onChange={e => setFormName(e.target.value)} required
+                          className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold"
+                          style={{ borderColor: "rgba(201,168,76,0.2)", color: "var(--cream)" }} />
+                      </div>
+                      <div>
+                        <label className="section-label block mb-2">Телефон *</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" value={formPhone} onChange={e => setFormPhone(e.target.value)} required
+                          className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold"
+                          style={{ borderColor: "rgba(201,168,76,0.2)", color: "var(--cream)" }} />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="section-label block mb-2">Расскажите о проекте</label>
+                      <textarea rows={5} placeholder="Что хотите создать? Размеры, материалы, пожелания..." value={formMessage} onChange={e => setFormMessage(e.target.value)}
+                        className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold resize-none"
                         style={{ borderColor: "rgba(201,168,76,0.2)", color: "var(--cream)" }} />
                     </div>
-                  </div>
-                  <div>
-                    <label className="section-label block mb-2">Расскажите о проекте</label>
-                    <textarea rows={5} placeholder="Что хотите создать? Размеры, материалы, пожелания..."
-                      className="w-full border bg-transparent px-4 py-3 font-montserrat text-sm outline-none transition-colors duration-300 focus:border-gold resize-none"
-                      style={{ borderColor: "rgba(201,168,76,0.2)", color: "var(--cream)" }} />
-                  </div>
-                  <button type="submit" className="btn-gold w-full py-4 text-xs tracking-widest uppercase font-montserrat">
-                    Отправить запрос
-                  </button>
-                  <p className="font-montserrat text-xs text-center" style={{ color: "var(--cream-muted)" }}>
-                    Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
-                  </p>
-                </form>
+                    {formStatus === "error" && (
+                      <p className="font-montserrat text-xs" style={{ color: "#e57373" }}>
+                        Не удалось отправить заявку. Попробуйте ещё раз.
+                      </p>
+                    )}
+                    <button type="submit" disabled={formStatus === "sending"}
+                      className="btn-gold w-full py-4 text-xs tracking-widest uppercase font-montserrat disabled:opacity-60">
+                      {formStatus === "sending" ? "Отправляю..." : "Отправить запрос"}
+                    </button>
+                    <p className="font-montserrat text-xs text-center" style={{ color: "var(--cream-muted)" }}>
+                      Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+                    </p>
+                  </form>
+                )}
               </div>
             </div>
           </AnimatedSection>
