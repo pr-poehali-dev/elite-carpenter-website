@@ -42,11 +42,13 @@ const REVIEWS = [
 ];
 
 const MATERIALS = [
-  { id: "oak", name: "Дуб", coeff: 1.0, desc: "Прочный, с выразительной текстурой" },
-  { id: "walnut", name: "Орех", coeff: 1.6, desc: "Благородный, тёмный оттенок" },
-  { id: "ash", name: "Ясень", coeff: 1.2, desc: "Светлый, эластичный" },
-  { id: "wenge", name: "Венге", coeff: 2.1, desc: "Экзотический, премиум-класс" },
-  { id: "cherry", name: "Вишня", coeff: 1.8, desc: "Красивый цвет, редкость" },
+  { id: "pine", name: "Сосна", coeff: 1.0, desc: "Бюджетно, доступно, популярно" },
+  { id: "larch", name: "Лиственница", coeff: 1.4, desc: "Влагостойкая, долговечная" },
+  { id: "profiled_timber", name: "Профилированный брус", coeff: 1.3, desc: "Точный профиль, плотные стыки" },
+  { id: "glued_timber", name: "Клееный брус", coeff: 1.9, desc: "Не трескается, премиум" },
+  { id: "log", name: "Оцилиндрованное бревно", coeff: 1.5, desc: "Классика, эстетика сруба" },
+  { id: "oak", name: "Дуб", coeff: 2.2, desc: "Для полов и лестниц, элита" },
+  { id: "thermowood", name: "Термодерево", coeff: 2.5, desc: "Для террас и фасадов, не гниёт" },
 ];
 
 const COMPLEXITY = [
@@ -101,7 +103,7 @@ export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePortfolioFilter, setActivePortfolioFilter] = useState("Все");
   const [selectedProduct, setSelectedProduct] = useState("table");
-  const [selectedMaterial, setSelectedMaterial] = useState("oak");
+  const [selectedMaterial, setSelectedMaterial] = useState("pine");
   const [selectedComplexity, setSelectedComplexity] = useState("simple");
   const [size, setSize] = useState(4);
   const [scrolled, setScrolled] = useState(false);
