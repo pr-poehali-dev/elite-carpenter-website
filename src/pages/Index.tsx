@@ -13,6 +13,7 @@ const CLOSED_GAZEBO_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9
 const TENT_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/a9d8e5b4-3014-4687-8cdc-e80cecdc64e9.jpg";
 const TERRACE_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/e024cf47-19f4-43b5-8b38-0caa0cf6c5d0.png";
 const TIMBER_GAZEBO_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/936c362d-77fe-4fe3-b788-923838f3b35e.png";
+const CLADDING_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/9976cacf-a28c-4b4f-8ee5-c59c05f1ef12.png";
 
 const PORTFOLIO = [
   { title: "Навес под авто", category: "Постройки", price: "от 12 000 ₽/м²", img: CANOPY_IMG },
@@ -24,7 +25,7 @@ const PORTFOLIO = [
   { title: "Баня под ключ", category: "Постройки", price: "от 450 000 ₽", img: TABLE_IMG },
   { title: "Навес с перголой", category: "Террасы", price: "от 90 000 ₽", img: HERO_IMG },
   { title: "Деревянные полы", category: "Отделка", price: "от 250 000 ₽", img: TABLE_IMG },
-  { title: "Обшивка фасада", category: "Отделка", price: "от 120 000 ₽", img: HERO_IMG },
+  { title: "Отделка", category: "Отделка", price: "от 1 200 ₽/м²", img: CLADDING_IMG },
 ];
 
 const SERVICES = [
