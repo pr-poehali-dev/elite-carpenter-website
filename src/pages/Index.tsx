@@ -555,7 +555,7 @@ export default function Index() {
                         const mat = MATERIALS.find(m => m.id === selectedMaterial)?.name || selectedMaterial;
                         const comp = COMPLEXITY.find(c => c.id === selectedComplexity)?.name || selectedComplexity;
                         setFormMessage(`Тип: ${productName}\nПлощадь: ${size} м²\nМатериал: ${mat}\nСложность: ${comp}\nПредварительная стоимость: ${calcPrice().toLocaleString("ru")} ₽`);
-                        document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
+                        document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="btn-gold px-8 py-4 text-xs tracking-widest uppercase font-montserrat w-full text-center"
                     >
@@ -644,7 +644,7 @@ export default function Index() {
                 ))}
               </div>
 
-              <div className="lg:col-span-3 border p-8" style={{ borderColor: "rgba(201,168,76,0.2)" }}>
+              <div id="contact-form" className="lg:col-span-3 border p-8" style={{ borderColor: "rgba(201,168,76,0.2)" }}>
                 {formStatus === "success" ? (
                   <div className="flex flex-col items-center justify-center py-12 text-center gap-6">
                     <div className="w-16 h-16 border-2 flex items-center justify-center" style={{ borderColor: "var(--gold)", borderRadius: "50%" }}>
