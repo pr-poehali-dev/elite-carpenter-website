@@ -600,10 +600,9 @@ export default function Index() {
             <div className="grid lg:grid-cols-5 gap-12 items-start">
               <div className="lg:col-span-2 space-y-8">
                 {[
-                  { icon: "Phone", label: "Телефон", value: "+7 (999) 123-45-67" },
-                  { icon: "Mail", label: "Email", value: "artem@lesnoj.ru" },
-                  { icon: "MapPin", label: "Мастерская", value: "Москва, ул. Столярная, 12" },
-                  { icon: "Clock", label: "Часы работы", value: "Пн–Пт: 10:00 – 19:00" },
+                  { icon: "Phone", label: "Телефон", value: "+7 (905) 710-88-90" },
+                  { icon: "Globe", label: "Сайт", value: "banidzen.ru" },
+                  { icon: "Clock", label: "Часы работы", value: "Пн–Вс: 8:00 – 20:00" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-10 h-10 border flex items-center justify-center flex-shrink-0"
