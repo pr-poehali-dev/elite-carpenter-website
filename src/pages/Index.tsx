@@ -27,7 +27,7 @@ const PORTFOLIO = [
   { title: "Деревянная терраса", category: "Террасы", price: "от 320 000 ₽", img: TERRACE_IMG },
   { title: "Баня в стиле барн / Скандинавия", category: "Постройки", price: "от 25 000 ₽/м²", img: BARN_BATH_IMG },
   { title: "Дом каркасный с панорамными окнами", category: "Постройки", price: "от 50 000 ₽/м²", img: FRAME_HOUSE_IMG },
-  { title: "Навес с перголой", category: "Террасы", price: "от 90 000 ₽", img: HERO_IMG },
+
   { title: "Деревянные полы", category: "Отделка", price: "от 1 200 ₽/м²", img: FLOOR_IMG },
   { title: "Отделка", category: "Отделка", price: "от 1 200 ₽/м²", img: CLADDING_IMG },
 ];
