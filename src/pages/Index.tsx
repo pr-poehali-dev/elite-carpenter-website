@@ -605,6 +605,7 @@ export default function Index() {
                   { icon: "Mail", label: "Email", value: "pruddzen@gmail.com" },
                   { icon: "MapPin", label: "Адрес", value: "МО, Кубинка, Наро-Фоминское шоссе, 4" },
                   { icon: "Clock", label: "Время работы", value: "Пн–Сб, 9:00–19:00" },
+                  { icon: "FileText", label: "ИНН / ОГРН", value: "644111764152 / 322508100238472" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="w-10 h-10 border flex items-center justify-center flex-shrink-0"
