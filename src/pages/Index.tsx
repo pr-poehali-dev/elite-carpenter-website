@@ -58,16 +58,17 @@ const COMPLEXITY = [
   { id: "complex", name: "Сложное", coeff: 2.2, desc: "Ручная резьба, инкрустация" },
 ];
 
+// Цена за м²
 const BASE_PRICES: Record<string, number> = {
-  gazebo: 180000,
-  bath: 380000,
-  terrace: 120000,
-  canopy: 60000,
-  floor: 80000,
-  cladding: 70000,
-  stairs: 90000,
-  roofing: 90000,
-  custom: 150000,
+  gazebo: 7000,
+  bath: 7000,
+  terrace: 3500,
+  canopy: 12000,
+  floor: 2500,
+  cladding: 1800,
+  stairs: 45000,
+  roofing: 4500,
+  custom: 7000,
 };
 
 const PRODUCT_NAMES: Record<string, string> = {
@@ -114,7 +115,7 @@ export default function Index() {
   const [selectedProduct, setSelectedProduct] = useState("gazebo");
   const [selectedMaterial, setSelectedMaterial] = useState("pine");
   const [selectedComplexity, setSelectedComplexity] = useState("simple");
-  const [size, setSize] = useState(4);
+  const [size, setSize] = useState(20);
   const [scrolled, setScrolled] = useState(false);
 
   const [formName, setFormName] = useState("");
@@ -150,11 +151,10 @@ export default function Index() {
   }, []);
 
   const calcPrice = () => {
-    const base = BASE_PRICES[selectedProduct] || 85000;
+    const pricePerSqm = BASE_PRICES[selectedProduct] || 7000;
     const mat = MATERIALS.find(m => m.id === selectedMaterial)?.coeff || 1;
     const comp = COMPLEXITY.find(c => c.id === selectedComplexity)?.coeff || 1;
-    const sizeCoeff = 0.5 + size * 0.15;
-    return Math.round(base * mat * comp * sizeCoeff / 1000) * 1000;
+    return Math.round(pricePerSqm * size * mat * comp / 1000) * 1000;
   };
 
   const portfolioCategories = ["Все", "Постройки", "Террасы", "Отделка"];
@@ -515,14 +515,14 @@ export default function Index() {
 
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <label className="section-label">Размер / объём</label>
-                      <span className="font-cormorant text-xl" style={{ color: "var(--gold)" }}>{size} / 10</span>
+                      <label className="section-label">Площадь</label>
+                      <span className="font-cormorant text-xl" style={{ color: "var(--gold)" }}>{size} м²</span>
                     </div>
-                    <input type="range" min={1} max={10} value={size}
+                    <input type="range" min={5} max={200} step={1} value={size}
                       onChange={e => setSize(Number(e.target.value))}
                       className="w-full" style={{ accentColor: "var(--gold)" }} />
                     <div className="flex justify-between mt-2 font-montserrat text-xs" style={{ color: "var(--cream-muted)" }}>
-                      <span>Малое</span><span>Среднее</span><span>Большое</span>
+                      <span>5 м²</span><span>100 м²</span><span>200 м²</span>
                     </div>
                   </div>
 
