@@ -433,7 +433,7 @@ export default function Index() {
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-5 gap-0">
+          <div className="grid md:grid-cols-4 gap-0 max-w-4xl mx-auto">
             {PROCESS.map((step, i) => (
               <AnimatedSection key={i}>
                 <div className="relative p-6 text-center group">
