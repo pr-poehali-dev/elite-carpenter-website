@@ -549,9 +549,18 @@ export default function Index() {
                     <p className="font-montserrat text-xs leading-relaxed mb-8" style={{ color: "var(--cream-muted)" }}>
                       Итоговая стоимость определяется после консультации и зависит от точных размеров, конструкции и дополнительных деталей.
                     </p>
-                    <a href="#contacts" className="btn-gold px-8 py-4 text-xs tracking-widest uppercase font-montserrat inline-block w-full text-center">
+                    <button
+                      onClick={() => {
+                        const productName = PRODUCT_NAMES[selectedProduct] || selectedProduct;
+                        const mat = MATERIALS.find(m => m.id === selectedMaterial)?.name || selectedMaterial;
+                        const comp = COMPLEXITY.find(c => c.id === selectedComplexity)?.name || selectedComplexity;
+                        setFormMessage(`Тип: ${productName}\nПлощадь: ${size} м²\nМатериал: ${mat}\nСложность: ${comp}\nПредварительная стоимость: ${calcPrice().toLocaleString("ru")} ₽`);
+                        document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="btn-gold px-8 py-4 text-xs tracking-widest uppercase font-montserrat w-full text-center"
+                    >
                       Обсудить проект
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
