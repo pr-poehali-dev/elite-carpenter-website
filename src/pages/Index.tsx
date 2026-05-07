@@ -14,6 +14,7 @@ const TENT_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22
 const TERRACE_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/e024cf47-19f4-43b5-8b38-0caa0cf6c5d0.png";
 const TIMBER_GAZEBO_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/936c362d-77fe-4fe3-b788-923838f3b35e.png";
 const CLADDING_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/9976cacf-a28c-4b4f-8ee5-c59c05f1ef12.png";
+const BARN_BATH_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/b23c1256-f302-42bb-a7ef-1f8ca549a561.png";
 
 const PORTFOLIO = [
   { title: "Навес под авто", category: "Постройки", price: "от 12 000 ₽/м²", img: CANOPY_IMG },
@@ -22,7 +23,7 @@ const PORTFOLIO = [
   { title: "Навес-шатёр под мангальную зону", category: "Постройки", price: "от 12 000 ₽/м²", img: TENT_IMG },
   { title: "Беседка из бруса", category: "Постройки", price: "от 12 000 ₽/м²", img: TIMBER_GAZEBO_IMG },
   { title: "Деревянная терраса", category: "Террасы", price: "от 320 000 ₽", img: TERRACE_IMG },
-  { title: "Баня под ключ", category: "Постройки", price: "от 450 000 ₽", img: TABLE_IMG },
+  { title: "Баня в стиле барн / Скандинавия", category: "Постройки", price: "от 25 000 ₽/м²", img: BARN_BATH_IMG },
   { title: "Навес с перголой", category: "Террасы", price: "от 90 000 ₽", img: HERO_IMG },
   { title: "Деревянные полы", category: "Отделка", price: "от 250 000 ₽", img: TABLE_IMG },
   { title: "Отделка", category: "Отделка", price: "от 1 200 ₽/м²", img: CLADDING_IMG },
