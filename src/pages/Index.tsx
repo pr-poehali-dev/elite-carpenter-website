@@ -7,7 +7,10 @@ const HERO_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22
 const MASTER_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/files/5578edd8-2d2e-4156-8a33-80e30f72bdd5.jpg";
 const TABLE_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/files/f9946736-63c3-4c0d-b9f5-4c8322a285ea.jpg";
 
+const CANOPY_IMG = "https://cdn.poehali.dev/projects/3183216a-e9d1-46be-9b8c-0fe22b3effd3/bucket/14e2befd-b035-44c0-a074-f5f124456534.jpg";
+
 const PORTFOLIO = [
+  { title: "Навес под авто", category: "Постройки", price: "от 12 000 ₽/м²", img: CANOPY_IMG },
   { title: "Беседка из бруса", category: "Постройки", price: "от 180 000 ₽", img: TABLE_IMG },
   { title: "Деревянная терраса", category: "Террасы", price: "от 320 000 ₽", img: HERO_IMG },
   { title: "Баня под ключ", category: "Постройки", price: "от 450 000 ₽", img: TABLE_IMG },
