@@ -712,14 +712,7 @@ export default function Index() {
           <div className="font-montserrat text-xs" style={{ color: "var(--cream-muted)" }}>
             © 2026 Авторская мастерская Руслана Светлого
           </div>
-          <div className="flex gap-4">
-            {["Instagram", "MessageCircle"].map((icon, i) => (
-              <a key={i} href="#" className="w-9 h-9 border flex items-center justify-center transition-colors duration-300 hover:border-gold"
-                style={{ borderColor: "rgba(201,168,76,0.2)" }}>
-                <Icon name={icon} size={14} style={{ color: "var(--gold)" }} />
-              </a>
-            ))}
-          </div>
+
         </div>
       </footer>
     </div>
